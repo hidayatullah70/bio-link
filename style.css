@@ -87,6 +87,7 @@ ul.links li:not(:last-child) {
     justify-content: space-between;
     align-items: center;
     background-color: #2d2d56;
+    gap: 1rem;
     padding: 1rem;
     border-radius: 20px;
     /**mengatur lebar link card akan selalu 80% walau diperkecil**/
@@ -100,6 +101,11 @@ ul.links li:not(:last-child) {
 
 .links .link-icon i {
     color: white;
+}
+
+.links .link-text {
+    text-align: center;
+
 }
 
 .links .link-icon {
