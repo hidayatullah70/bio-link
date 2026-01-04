@@ -1,13 +1,13 @@
 // ** Untuk membuat link bisa di copy ** //
 
-const actionLinks = document.querySelectorAll('.link-card .link-action');
+const actionLinks = document.querySelectorAll(".link-card .link-action");
 
 actionLinks.forEach((action) => {
     action.addEventListener("click", (e) => {
     e.preventDefault();
     navigator.clipboard.writeText(action.parentElement.getAttribute("href"));
 
-// ** Untuk menampilkan toast notification ** //
+// ** *Untuk menampilkan toast notification ** //
 
     document.getElementById("toast").innerHTML = `
         <div class="toast-container">

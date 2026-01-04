@@ -11,12 +11,13 @@ html {
 
 body {
     background-color: #191931;
-    color: #e1f1f1;
+    color: #e1e1f1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: outfit, sans-serif;
+    font-family: "outfit", sans-serif;
     padding-top: 4rem;
+    padding-bottom: 2rem;
     gap: 1rem; /*krn display flex, gap antar text atas bawah*/
 }
 
@@ -27,10 +28,10 @@ body {
     font-size: 12rem;
     text-transform: uppercase;
     font-weight: 900;
-    -webkit-text-stroke: 2px #2a2a44;
+    -webkit-text-stroke: 2px #2d2d56;
     /* text menjadi outline */
     -webkit-text-fill-color: transparent;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     z-index: -1;
     /*  text ada di paling belakang user */
     user-select: none;
@@ -41,7 +42,7 @@ body {
 .my-photo {
     width: 10rem;
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     object-fit: cover;
     object-position: top;
 }
@@ -56,12 +57,12 @@ a {
     color: #8787a3;
 }
 
-.sosmed a:not(:last-child) { /**mengatur jarak antar icon sosmed kecuali icon terakhir**/
-    margin-right: 1rem; /*jarak antar icon sosmed*/
-}
-
 .sosmed i:hover {
     color: white;
+}
+
+.sosmed a:not(:last-child) { /**mengatur jarak antar icon sosmed kecuali icon terakhir**/
+    margin-right: 1rem; /*jarak antar icon sosmed*/
 }
 
 ul {
@@ -91,12 +92,23 @@ ul.links li:not(:last-child) {
     padding: 1rem;
     border-radius: 20px;
     /**mengatur lebar link card akan selalu 80% walau diperkecil**/
-    box-shadow: 8px 10px 0 0 #0f0f25;
+    box-shadow: 8px 10px 0 #0f0f25;
     border: 2px solid #2d2d56;
 }
 
 .link-card:hover {
     border: 2px solid white;
+}
+
+.links .link-icon {
+    /* gradasi warna */
+    background-image: linear-gradient(to top, purple, cyan);
+    padding: 0.5rem;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .links .link-icon i {
@@ -107,19 +119,10 @@ ul.links li:not(:last-child) {
     text-align: center;
 }
 
-.links .link-icon {
-    background-image: linear-gradient(to top, purple, cyan);
-    padding: 0.5rem;
-    border-radius: 10px;
-    aspect-ratio: 1/1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .link-action {
     color: #8787a3;
     cursor: pointer;
+    padding: 10px;
 }
 
 .copyright {
@@ -134,11 +137,11 @@ ul.links li:not(:last-child) {
 
 .copyright img{
     width: 2rem;
-    border-radius: 80%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: top;
     opacity: 0.4;
+    /* border-radius: 80%; */
+    /* aspect-ratio: 1 / 1; */
+    /* object-fit: cover; */
+    /* object-position: top; */
 }
 
 #toast {
@@ -151,7 +154,7 @@ ul.links li:not(:last-child) {
 .toast-container {
    background-color: white;
    color: #0f0f25;
-   padding: 0.75rem;
+   padding: 1rem;
    margin-top: 1rem;
    border-radius: 1rem;
    animation: muncul 300ms ease-in-out;
@@ -175,10 +178,8 @@ ul.links li:not(:last-child) {
 @keyframes hilang {
     from {
         opacity: 1;
-        /* transform: translateY(-4rem); */
     }
     to {
         opacity: 0;
-        /* transform: translateY(0); */
     }
 }   
